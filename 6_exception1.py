@@ -1,20 +1,14 @@
-"""
-
-Домашнее задание №1
-
-Исключения: KeyboardInterrupt
-
-* Перепишите функцию hello_user() из задания while1, чтобы она 
-  перехватывала KeyboardInterrupt, писала пользователю "Пока!" 
-  и завершала работу при помощи оператора break
-    
-"""
-
-def hello_user():
-    """
-    Замените pass на ваш код
-    """
-    pass
+def hello_user(talk):
+  try:
+    while True:
+      user_say = input('как дела? ')
+      if user_say == 'хорошо':
+          print('у меня тоже')
+          break
+      else:
+          print('что значит {}?'.format(user_say))
+  except KeyboardInterrupt:
+    print('пока!')
     
 if __name__ == "__main__":
-    hello_user()
+    hello_user('')
