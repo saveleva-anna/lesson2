@@ -1,14 +1,15 @@
 questions_and_answers = {
-  'как дела':'хорошо',
+  'как дела?':'хорошо',
   'что делаешь?':'программирую',
-  'как погода':'солнечно'
+  'как погода?':'солнечно'
 }
 
 while True:
   user_say=input('введите вопрос ')
-  if user_say == 
-    print ()
-    break
+  a = questions_and_answers.get(user_say,0)
+  if not a == 0:
+    print(a)
   else:
-    print ('задайте другой вопрос')
-    
+    print ('я не знаю ответ')
+    break
+
